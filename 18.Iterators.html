@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+		
+		let mySet=new Set([1,2,3,34,4]);
+		console.dir(mySet);
+
+		for(let val of mySet)
+		{
+		  console.log(val);
+		}
+
+		let anObject={
+			name:'bob',
+			age:20,
+			friends:['john', 'kim', 'peter'],
+			getName:function()
+			{
+			   return this.name; 
+			}
+		};
+
+		for(let key in anObject)
+		{
+			console.log(key);
+		}
+
+		let myArray=[1, 2, 3, 4, 5, 6];
+		let iterator=myArray[Symbol.iterator]();
+
+		console.log(iterator.next());
+		console.log(iterator.next());
+		console.log(iterator.next());
+		console.log(iterator.next());
+		console.log(iterator.next());
+		console.log(iterator.next());	
+	</script>
+</head>
+<body>
+  <p>1.Set for(let val of Set){} </p>
+  <h2>Symbol.iterator</h2>
+ <p>Whenever an object needs to be iterated (such as at the beginning of a for..of loop), its @@iterator method is called with no arguments, and the returned iterator is used to obtain the values to be iterated</p>
+</body>
+</html>

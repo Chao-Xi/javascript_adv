@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+		
+		var obj=function()
+		{
+			var i=0;  //var private variable
+
+			var add=function(j)  //var=>private function
+			{
+			  i+=j;
+			  return this; //method chaining	
+			}
+
+			var substract=function(j)
+			{
+			  i-=j;
+			  return this; //method chaining	
+			}
+
+			var print=function()
+			{
+			 console.log(i)	
+			}
+
+			return {add:add, substract:substract, print:print};  //private function
+		};
+
+		var x=obj(); //no need use the new
+        x.add(2102).substract(23).print(); 
+	</script>
+</head>
+<body>
+
+</body>
+</html>

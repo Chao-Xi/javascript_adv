@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+	  var obj={num:2};
+	  //obj=>object
+      //num=>property
+      //2=>value
+
+      var addToThis=function(a,b,c)
+      {
+      	return this.num+a+b+c;
+      }
+      //obj.num<=>this.num
+
+      //addToThis.call(obj, 3);
+      //functionname.call(objname, functionargument);
+      console.log(addToThis.call(obj, 3, 1, 2));
+
+
+
+      var addToThis2=function(a, b, c)
+      {
+      	return this.num+a+b+c;
+      }
+
+      var arr=[4,5,6];
+      console.log(addToThis2.apply(obj, arr));
+
+      //This is the only difference between call and apply
+	</script>
+</head>
+<body>
+
+</body>
+</html>

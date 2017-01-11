@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+		var passed=3;//globe variable
+		var addTo=function()
+		{
+		  var inner=2;
+          return passed+inner;   
+		}
+    //Closure
+	console.dir(addTo());  //=>5
+
+    var passed=4;
+	console.dir(addTo());  //=>6	
+	</script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+		//baseclass
+		var job=function()
+		{
+		  this.pays=true; 	
+		}
+
+		//prototype method
+		job.prototype.print=function()
+		{
+		 console.log(this.pays ? "Please hire me" : 'no thank u');	
+		}
+
+		//subclass
+		var TechJob=function(title, pays)
+		{
+		  job.call(this); //subclass call the baseclass
+		  
+		  this.title=title;
+		  this.pays=pays	
+		}
+
+		TechJob.prototype=Object.create(job.prototype);
+		TechJob.prototype.constructor=TechJob;
+
+		var softwarePosition=new TechJob('Javascript Programmer', true);
+
+		console.log(softwarePosition.print());
+	</script>
+</head>
+<body>
+  <p>1.Javascript doesnt have class definition</p>
+  <p>2."Object" os the master root or root object All objects in javascript are created from "Object"</p>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+	 //More efficient than Constructor
+	 var peopleDynamicProto=function(name, age, city)
+	 {
+        this.age=age;
+        this.name=name;
+        this.city=city;
+
+        if(typeof this.printPerson!=='function')
+        {
+        	 peopleDynamicProto.prototype.printPerson=function()
+	       {
+	 	    console.log(this.name+", "+this.age+", "+this.city);
+	       }
+        }      	
+	 };
+	
+	 var person1=new peopleDynamicProto('LS',27,'NYC');
+	 person1.printPerson();
+	</script>	
+</head>
+<body>
+
+</body>
+</html>

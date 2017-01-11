@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+		var x=function(j)
+		{
+		  this.i=0;
+		  this.j=j;
+
+		  this.getJ=function()
+		  {
+		  	return this.j;
+		  };	
+		};
+        
+        x.prototype.getI=function()
+        {
+           return this.i;
+        }
+
+		var x1=new x(1);
+		var x2=new x(2);
+        
+        console.log("i is: "+x2.getI());  
+		console.log("j is: "+x2.getJ());
+
+		var y=function(){ };
+		console.log(y.toString());
+	</script>
+</head>
+<body>
+  <p>1.Javascript jas prototype based inheritance</p>
+  <p>2.Every function expression is a constructor</p>
+  <p>3.{objectName}.prototype.{methodNmae}</p>
+  <p>4.__proto__ means parent or creator</p>
+  <p>5.Normal function is created under the master object</p>
+</body>
+</html>

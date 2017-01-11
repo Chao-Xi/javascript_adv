@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+	let cleanRoom=function()
+	{
+	  return new Promise(function (resolve, reject)
+	  {
+        resolve(' Cleaned The Room ');
+	  });	
+	};
+
+	let removeGarbage=function(message)
+	{
+		return new Promise(function(resolve, reject)
+		{
+		  resolve(message + ' Remove Garbage ');	
+		});
+	};	
+
+	let winIcecream=function(message)
+	{
+      return new Promise(function(resolve, reject)
+      {
+      	resolve(message + ' win Icecream ');
+      })
+	};
+
+	cleanRoom().then(function(results){
+		return removeGarbage(results);
+	}).then(function(results){
+		return winIcecream(results);
+	}).then(function(results){
+		return console.log('finished'+ results);
+	});
+	</script>
+</head>
+<body>
+
+</body>
+</html>

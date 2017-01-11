@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+    var addTo=function(passed)
+    {
+    	var add=function(inner)
+    	{
+    		return passed+inner;
+    	};
+    	return add;
+    };
+
+    var add_p1=new addTo(3);
+    //now add_p1 is a function with perserved data
+
+    console.log(add_p1(4));
+    //closure is nothing but a function with perserved data 
+	</script>
+</head>
+<body>
+
+</body>
+</html>
